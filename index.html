@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- css読み込み -->
+<!-- リセット -->
+<link rel="stylesheet" href="./css/reset.css">
+<!-- スリック -->
+<link rel="stylesheet" href="./slick/slick.css">
+<link rel="stylesheet" href="./slick/slick-theme.css">
+<!-- スタイル -->
+<link rel="stylesheet" href="./css/style.css">
+<title>チャットアプリ</title>
+</head>
+<body>
+<!-- html -->
+<!-- header -->
+<header>
+    <section>
+        <a id="home" class="header-size" href="#">Home</a>
+        <a id="menu" class="header-size" href="#">Menu</a>
+        <a id="chat" class="header-size" href="#">Chat</a>
+        <!-- <button id="home">home</button>
+        <button id="menu">menu</button>
+        <button id="chat">chat</button> -->
+    </section>
+</header>
+
+<!-- hedaer画面 -->
+<section id="header__hide" class="head-c">
+    <div class="header-pad">
+        <h1 class="header-sec">Beetler</h1>
+    </div>
+    <div class="header-pic">
+        <img src="./img/header.png" alt="">
+    </div>
+
+</section>
+<!-- home画面 -->
+<section id="home__hide" class="hide">
+    <div>
+        <h2 class="home-text">~~About~~</h2>
+        <div>
+            <p class="home-pra">原宿にある大衆居酒屋Beetleは、<br>手軽に楽しめる料理やドリンクを提供する、カジュアルな雰囲気のお店です。</p>
+            <p class="home-pra">店内は、落ち着いた雰囲気で、木目調の内装が特徴的です。</p>
+            <p class="home-pra">メニューは、おしゃれなビールやカクテル、日本酒や焼酎などのアルコール類から、<br>人気のある居酒屋メニューまで幅広く取り揃えられています。<br>特に、料理はリーズナブルな価格で、種類も豊富で、どれも美味しく、ボリュームもたっぷりです。</p>
+            <p class="home-pra">原宿に来たら、手軽に楽しめる大衆居酒屋Beetleで、<br>美味しい料理とドリンク、そして楽しい時間を過ごしてみてはいかがでしょうか。</p>
+        </div>
+    </div>
+    <ul class="home-img">
+        <li class="home-pic"><img src="./img/pic1.jpeg" alt="#"></li>
+        <li class="home-pic"><img src="./img/pic2.jpeg" alt="#"></li>
+        <li class="home-pic"><img src="./img/pic3.jpeg" alt="#"></li>
+    </ul>
+    <h2 class="home-text">~~Access~~</h2>
+    <div class="home-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2967906421522!2d139.7027982762094!3d35.66969347259108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca4bf41596f%3A0xe0964e01f3f983e0!2z5aSn6KGG6aOf5aCCIEJFRVRMRSDljp_lrr8!5e0!3m2!1sja!2sjp!4v1682848110791!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="access-pad">
+        <p class="home-access">営業時間 11時30分〜23時00分</p>
+        <p class="home-access">TEL 03-6434-7470</p>
+        <p class="home-access">事務所所在地 〒150-0001 東京都渋谷区神宮前１丁目１０−２３ 原宿ふらっとビル 1階</p>
+    </div>
+</section>
+<!-- menu画面 -->
+<section id="menu__hide" class="hide">
+    <div>
+        <h1 class="home-text">~~Menu~~</h1>
+    </div>
+    <div class="menu-flex">
+        <p class="menu-text">カツ丼</p>
+        <p class="menu-text">油淋鶏定食</p>
+        <p class="menu-text">アジフライ定食</p>
+        <p class="menu-text">ハムエッグ定食</p>
+        <p class="menu-text">刺身定食</p>
+        <p class="menu-text">モツ煮込み定食</p>
+        <p class="menu-text">さば塩焼き定食</p>
+        <p class="menu-text">レバニラ炒め定食</p>
+        <p class="menu-text">肉野菜炒め定食</p>
+        <p class="menu-text">豚肩ロース生姜焼き定食</p>
+        <p class="menu-text">カレー</p>
+        <p class="menu-text">唐揚げ定食</p>
+        <p class="menu-text">月替わりミックス定食</p>
+        <p class="menu-text">月替わり定食</p>
+    </div>
+    <h1 class="home-text">~~Random~~</h1>
+    <p id="menu-view">？？？？</p>
+    <div class="menu-pad">
+        <button id="menu-btn">Start</button>
+    </div>
+</section>
+<!-- chat画面 -->
+<section id="chat__hide" class="hide">
+    <h1 class="home-text">~~Chat~~</h1>
+    <div>
+        <p class="chat__name">~name~</p>
+        <div class="chat-uname">
+            <div><input type="text" id="uname"> </div>
+        </div>
+        <p class="chat__name">~content~</p>
+        <div class="chat-text">
+            <textarea id="text" cols="30" rows="10"></textarea>
+        </div>
+        <div class="chat-send">
+            <button id="send">送信</button>
+        </div>
+        <div class="chat-flex">
+            <div id="output" style="overflow: auto; height: 300px; border: 3px solid black;"></div>
+        </div>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <div class="footer-box">
+        <h1 class="footer-text">~~ Club Beetle ~~</h1>
+    </div>
+</footer>
+
+
+
+<!-- html -->
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./slick/slick.min.js"></script>
+<!-- JQuery -->
+
+<!--** 以下Firebase **-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved } 
+    from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4NXnOElhM9K7iQ4hJtBpQIegXA587_dk",
+      authDomain: "gsdemo-715b6.firebaseapp.com",
+      projectId: "gsdemo-715b6",
+      storageBucket: "gsdemo-715b6.appspot.com",
+      messagingSenderId: "271219462804",
+      appId: "1:271219462804:web:09fcf95e58792f9c515a81"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const dbRef = ref(db,"chat");
+
+
+    $("#send").on("click",function(){
+        const msg = {
+            uname:$("#uname").val(),
+            text :$("#text").val()
+        };
+        console.log(msg);
+        const newPostRef = push(dbRef); //ユニークキー生成
+        set(newPostRef, msg); //ユニークキーとMSG
+
+        $("#uname").val("");
+        $("#text").val("");
+
+        $("#output").scrollTop($("#output")[0].scrollHeight);
+    });
+
+    // $("#text").on("keydown",function(e){         //dblclickダブルクリック
+    //     console.log(e.key);
+    //     if(e.key == "Enter"){
+    //     const msg = {
+    //         uname:$("#uname").val(),
+    //         text :$("#text").val()
+    //     };
+    //     console.log(msg);
+    //     const newPostRef = push(dbRef);
+    //     set(newPostRef, msg); //ユニークキーとMSG
+    //     $("#output").scrollTop($("#output")[0].scrollHeight);
+    //     }
+    // });
+
+    onChildAdded(dbRef,function(data){
+        const msg = data.val(); //オブジェクトデータ取得
+        const key = data.key; //ユニークキーも取りたいとき,取得の仕方
+        const h ='<p>'+msg.uname+' : '+msg.text+'</p>';
+        $("#output").append(h);
+        console.log(key);
+    });
+
+//
+function headhide(){
+    $("#header__hide").addClass("hide");
+}
+//header画面消去
+$("#home").on("click",function(){
+        headhide();
+    });
+$("#menu").on("click",function(){
+        headhide();
+    });
+$("#chat").on("click",function(){
+        headhide();
+    });
+
+
+// home画面のみ表示
+    $("#home").on("click",function(){
+        $("#home__hide").removeClass("hide");
+        $("#menu__hide").addClass("hide");
+        $("#chat__hide").addClass("hide");
+    });
+// menu画面のみ表示
+    $("#menu").on("click",function(){
+        $("#menu__hide").removeClass("hide");
+        $("#home__hide").addClass("hide");
+        $("#chat__hide").addClass("hide");
+    });
+// chat画面のみ表示
+    $("#chat").on("click",function(){
+        $("#chat__hide").removeClass("hide");
+        $("#home__hide").addClass("hide");
+        $("#menu__hide").addClass("hide");
+    });
+
+//menuボタンランダム
+    $("#menu-btn").on("click",function(){
+        const r = ["月替わり定食","月替わりミックス定食",
+                    "唐揚げ定食","カレー","豚肩ロース生姜焼き定食",
+                    "肉野菜炒め定食","レバニラ炒め定食",
+                    "さば塩焼き定食","モツ煮込み定食",
+                    "刺身定食","ハムエッグ定食","アジフライ定食",
+                  "油淋鶏定食","カツ丼"]
+        const s = Math.floor(Math.random()*r.length);
+        $("#menu-view").html(r[s]);
+    });
+
+
+
+  </script>
+
+</body>
+</html>
+
+<!-- 選択して削除　これをクリックしたのをどう認識させる？
+例　全部のデータをとって何番目は負荷がかかる
+一個一個にidがある　こんにちは　保存　表示　帰ってきた文字はpタグに入る　idをつける
+ファイヤーベース上で操作して削除するのがいい
+自動でidを発行してくれるのを取得してそのまま書いて削除する
+今保存したもののidを取得する関数がある
+
+Class 動的に　付与で検索したらいい　トラップに陥りがち　ユニークナンバー
+
+送信取り消しはラグを意図的に設定してあげると送信取り消しが可能になる
+前のアクションを実行しないと設定すると消せるかも -->
